@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Keg } from './../keg';
 
 @Component({
   selector: 'app-keg-list',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./keg-list.component.css']
 })
 export class KegListComponent implements OnInit {
+  kegList: Keg[] = [];
 
   constructor() { }
 
