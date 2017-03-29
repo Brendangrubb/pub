@@ -1,3 +1,38 @@
-<p>
-  keg-list works!
-</p>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Price</th>
+      <th>Name</th>
+      <th>Brand</th>
+      <th>ABV</th>
+      <th>Pints</th>
+      <th>Sell</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let keg of kegList; let idx = index;">
+      <td>{{keg.price}}</td>
+      <td>{{keg.brewName}}</td>
+      <td>{{keg.brewBrand}}</td>
+      <td>{{keg.alcoholContent}}</td>
+      <td>{{keg.pintsRemaining}}</td>
+      <td><button (click)="sellPint(idx)" class="btn btn-default">Sell a Pint</button></td>
+      <td><button (click)="editKeg(idx)" class="btn btn-default">Edit</button></td>
+      <td><button (click)="deleteKeg(idx)" class="btn btn-default">Delete</button></td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td><button (click)="newKeg()" class="btn btn-default">New Keg</button></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tfoot>
+</table>
