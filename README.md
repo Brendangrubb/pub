@@ -4,6 +4,7 @@
 * $ `apm install atom-typescript`
 * $ `ng new pub`
 * $ `ng g component keg-list`
+* $ `ng g class keg`
 
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.26.
