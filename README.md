@@ -18,6 +18,11 @@ bower install bootstrap --save
 (Add /bower_components under #dependancies in .gitignore)
 (In angular-cli.json under apps:, styles add ,"../bower_components/bootstrap/dist/css/bootstrap.css")
 
+ng g component header
+
+ng g component keg-edit
+
+
 ## Software to have on computer to develop and Run
 * [Git](https://git-scm.com/)
 * [Node.js](https://nodejs.org/) (with NPM)

@@ -13,6 +13,7 @@ export class KegListComponent implements OnInit {
   @Input() kegList: Keg[];
   @Output() deleteKegSender = new EventEmitter();
   @Output() sellPintSender = new EventEmitter();
+  @Output() editKegSender = new EventEmitter();
 
   deleteKeg(idx: number) {
     this.deleteKegSender.emit(idx);
@@ -20,6 +21,10 @@ export class KegListComponent implements OnInit {
 
   sellPint(idx: number) {
     this.sellPintSender.emit(idx);
+  }
+
+  startEditKeg(idx) {
+    this.editKegSender.emit(idx);
   }
 
   constructor() { }

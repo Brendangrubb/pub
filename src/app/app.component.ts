@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Keg }       from './keg.model';
+import { Keg } from './keg.model';
 
 
 @Component({
@@ -10,10 +10,12 @@ import { Keg }       from './keg.model';
 
 
 export class AppComponent {
+  editKeg: Keg = null;
+
   kegList: Keg[] = [
-    new Keg("Squirrel IPA", "SheDoots", 5, 7.5),
-    new Keg("Hop Scotch Red", "Pearl Divers", 4, 7.1),
-    new Keg("Big Stick Stout", "East Side Brewlers", 6, 8, 120)
+    new Keg('Squirrel IPA', 'SheDoots', 5, 7.5),
+    new Keg('Hop Scotch Red', 'Pearl Divers', 4, 7.1),
+    new Keg('Big Stick Stout', 'East Side Brewlers', 6, 8, 120)
   ];
 
   deleteKeg(idx: number) {
@@ -22,6 +24,14 @@ export class AppComponent {
 
   sellPint(idx: number) {
     this.kegList[idx].pintsRemaining-- ;
+  }
+
+  startEditKeg(idx: number) {
+    this.editKeg = this.kegList[idx];
+  }
+
+  endEditKeg(idx: number) {
+    this.editKeg = null;
   }
 
 

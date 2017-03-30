@@ -2,10 +2,25 @@
 
   <div class="container">
 
-    <app-keg-list
-      [kegList]="kegList"
-      (deleteKegSender)="deleteKeg($event)"
-      (sellPintSender)="sellPint($event)"
-    ></app-keg-list>
+    <div class="row">
+      <div class="col-md-8">
+        <app-keg-list
+          [kegList]="kegList"
+          (deleteKegSender)="deleteKeg($event)"
+          (sellPintSender)="sellPint($event)"
+          (editKegSender)="startEditKeg($event)"
+        ></app-keg-list>
+      </div> <!-- col -->
+
+      <div class="col-md-4">
+        <app-keg-edit
+          [editKeg]="editKeg"
+          (endEditKegSender)="endEditKeg()"
+        >
+        </app-keg-edit>
+      </div> <!-- col -->
+
+    </div> <!-- row -->
+
 
   </div>
