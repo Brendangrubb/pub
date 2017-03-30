@@ -22,7 +22,8 @@
 
         <app-new-keg
           [showNewKegForm]="showNewKegForm"
-          (savedNewKegSender)="savedNewKeg()"
+          (savedNewKegSender)="savedNewKeg($event)"
+          (cancelNewKegSender)="cancelNewKegSender()"
         ></app-new-keg>
       </div> <!-- col -->
 

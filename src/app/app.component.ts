@@ -39,4 +39,13 @@ export class AppComponent {
     this.showNewKegForm = true;
   }
 
+  savedNewKeg(newKeg: Keg) {
+    this.kegList.push(newKeg);
+    this.showNewKegForm = false;
+  }
+
+  cancelNewKegSender() {
+    this.showNewKegForm = false;
+  }
+
 }

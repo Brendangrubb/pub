@@ -4,30 +4,31 @@
   </div>
   <div class="form-group">
     <label for="brewName">Name of Brew:</label>
-    <input #brewName type="text" name="brewName" class="form-control">
+    <input #brewName type="text" name="brewName" class="form-control" required>
   </div>
 
   <div class="form-group">
     <label for="brewBrand">Brand of Brew:</label>
-    <input #brewBrand type="text" name="brewBrand" class="form-control">
+    <input #brewBrand type="text" name="brewBrand" class="form-control" required>
   </div>
 
   <div class="form-group">
     <label for="price">Price / Pint:</label>
-    <input #price type="number" name="price" class="form-control">
+    <input #price type="number" name="price" class="form-control" required>
   </div>
 
   <div class="form-group">
     <label for="alcoholContent">ABV:</label>
-    <input #alcoholContent type="number" name="alcoholContent" class="form-control">
+    <input #alcoholContent type="number" name="alcoholContent" class="form-control" required>
   </div>
 
   <div class="form-group">
     <label for="pintsRemaining">Pints Remaining:</label>
-    <input #pintsRemaining type="number" name="pintsRemaining" class="form-control">
+    <input #pintsRemaining value=124 type="number" name="pintsRemaining" class="form-control" required>
   </div>
 
   <div class="form-group">
-    <button (click)="saveNewKeg()" class="btn btn-default">Submit New Keg</button>
+    <button (click)="saveNewKeg(brewName.value, brewBrand.value, price.value, alcoholContent.value, pintsRemaining.value)" class="btn btn-default">Submit New Keg</button>
+    <button (click)="cancelSaveNewKeg()" class="btn btn-default">Nevermind</button>
   </div>
 </form>
