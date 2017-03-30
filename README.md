@@ -7,6 +7,24 @@
 * $ `ng g class keg`
 * $ `ng lint`
 
+npm install (reconstitute after clone)
+
+npm list -g bower (check bower installation need 1.8.0)
+
+bower init (defaults taken, add )
+
+bower install bootstrap --save
+
+(Add /bower_components under #dependancies in .gitignore)
+(In angular-cli.json under apps:, styles add ,"../bower_components/bootstrap/dist/css/bootstrap.css")
+
+## Software to have on computer to develop and Run
+
+## Bring up this project
+clone
+npm install
+etc.
+ng serve (localhost:4200)
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.26.
 

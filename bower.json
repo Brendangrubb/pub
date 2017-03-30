@@ -1,0 +1,17 @@
+{
+  "name": "pub",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "https://github.com/bseaver/js3-angular-pub",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
