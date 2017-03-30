@@ -16,7 +16,7 @@
       <td>${{keg.price}}</td>
       <td>{{keg.brewName}}</td>
       <td>{{keg.brewBrand}}</td>
-      <td>{{keg.alcoholContent}}%</td>
+      <td [class]="colorABV(keg)">{{keg.alcoholContent}}%</td>
       <td>{{keg.pintsRemaining}}</td>
       <td><button (click)="sellPint(idx)" class="btn btn-default">Sell a Pint</button></td>
       <td><button (click)="startEditKeg(idx)" class="btn btn-default">Edit</button></td>

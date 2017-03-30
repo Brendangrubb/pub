@@ -47,5 +47,4 @@ export class AppComponent {
   cancelNewKegSender() {
     this.showNewKegForm = false;
   }
-
 }

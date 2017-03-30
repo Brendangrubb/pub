@@ -16,6 +16,9 @@ export class KegListComponent implements OnInit {
   @Output() editKegSender = new EventEmitter();
   @Output() newKegSender = new EventEmitter();
 
+  lowABV = 5.5;
+  highABV = 7.0;
+
   deleteKeg(idx: number) {
     this.deleteKegSender.emit(idx);
   }
@@ -35,6 +38,17 @@ export class KegListComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  colorABV(thisKeg: Keg) {
+    let thisColor = "bg-warning";
+    if (thisKeg.alcoholContent <= this.lowABV) {
+      thisColor = "bg-success";
+    }
+    if (thisKeg.alcoholContent >= this.highABV) {
+      thisColor = "bg-danger";
+    }
+    return thisColor;
   }
 
 }
