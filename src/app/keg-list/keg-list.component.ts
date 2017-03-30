@@ -18,6 +18,7 @@ export class KegListComponent implements OnInit {
 
   lowABV = 5.5;
   highABV = 7.0;
+  kegListFilter = 'all';
 
   deleteKeg(idx: number) {
     this.deleteKegSender.emit(idx);
@@ -49,6 +50,10 @@ export class KegListComponent implements OnInit {
       thisColor = "bg-danger";
     }
     return thisColor;
+  }
+
+  changeKegListFilter(option: string) {
+    this.kegListFilter = option;
   }
 
 }

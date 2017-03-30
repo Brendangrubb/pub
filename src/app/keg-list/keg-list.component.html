@@ -1,3 +1,8 @@
+<select (change)="changeKegListFilter($event.target.value)">
+  <option value="all">All Kegs</option>
+  <option value="under10">Pints Less Than 10</option>
+</select>
+<br>
 <table class="table table-striped">
   <thead>
     <tr>
@@ -12,7 +17,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let keg of kegList | lowPints; let idx = index;">
+    <tr *ngFor="let keg of kegList | lowPints:kegListFilter; let idx = index;">
       <td>${{keg.price}}</td>
       <td>{{keg.brewName}}</td>
       <td>{{keg.brewBrand}}</td>

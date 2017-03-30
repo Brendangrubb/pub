@@ -7,10 +7,10 @@ import { Keg } from './keg.model';
 })
 export class LowPintsPipe implements PipeTransform {
 
-  transform(input: Keg[]): Keg[] {
+  transform(input: Keg[], option: string): Keg[] {
     var output: Keg[] = [];
     for (var i = 0; i < input.length; i++) {
-      if (input[i].pintsRemaining < 10) {
+      if (option === 'all' || input[i].pintsRemaining < 10) {
         output.push(input[i]);
       }
     }
