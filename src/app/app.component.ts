@@ -16,4 +16,10 @@ export class AppComponent {
     new Keg("Big Stick Stout", "East Side Brewlers", 6, 8, 120)
   ];
 
+  deleteKeg(idx: number) {
+    this.kegList.splice(idx, 1);
+  }
+
+
+
 }

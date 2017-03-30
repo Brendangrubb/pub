@@ -1,5 +1,5 @@
 <app-header></app-header>
 
   <div class="container">
-    <app-keg-list [kegList]="kegList"></app-keg-list>
+    <app-keg-list [kegList]="kegList" (deleteKegSender)="deleteKeg($event)"></app-keg-list>
   </div>

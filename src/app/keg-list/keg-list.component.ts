@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Keg } from './../keg.model';
 
 
@@ -11,7 +11,12 @@ import { Keg } from './../keg.model';
 
 export class KegListComponent implements OnInit {
   @Input() kegList: Keg[];
-  
+  @Output() deleteKegSender = new EventEmitter();
+
+  deleteKeg(idx: number) {
+    this.deleteKegSender.emit(idx);
+  }
+
   constructor() { }
 
   ngOnInit() {
