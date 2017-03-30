@@ -34,5 +34,8 @@ export class AppComponent {
     this.editKeg = null;
   }
 
+  startNewKeg() {
+    alert("made it to app.component.js");
+  }
 
 }

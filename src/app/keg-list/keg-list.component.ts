@@ -14,6 +14,7 @@ export class KegListComponent implements OnInit {
   @Output() deleteKegSender = new EventEmitter();
   @Output() sellPintSender = new EventEmitter();
   @Output() editKegSender = new EventEmitter();
+  @Output() newKegSender = new EventEmitter();
 
   deleteKeg(idx: number) {
     this.deleteKegSender.emit(idx);
@@ -25,6 +26,10 @@ export class KegListComponent implements OnInit {
 
   startEditKeg(idx) {
     this.editKegSender.emit(idx);
+  }
+
+  startNewKeg() {
+    this.newKegSender.emit();
   }
 
   constructor() { }
