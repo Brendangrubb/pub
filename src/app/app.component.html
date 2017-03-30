@@ -19,6 +19,11 @@
           (endEditKegSender)="endEditKeg()"
         >
         </app-keg-edit>
+
+        <app-new-keg
+          [showNewKegForm]="showNewKegForm"
+          (savedNewKegSender)="savedNewKeg()"
+        ></app-new-keg>
       </div> <!-- col -->
 
     </div> <!-- row -->

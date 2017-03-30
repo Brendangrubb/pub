@@ -11,6 +11,7 @@ import { Keg } from './keg.model';
 
 export class AppComponent {
   editKeg: Keg = null;
+  showNewKegForm = false;
 
   kegList: Keg[] = [
     new Keg('Squirrel IPA', 'SheDoots', 5, 7.5),
@@ -35,7 +36,7 @@ export class AppComponent {
   }
 
   startNewKeg() {
-    alert("made it to app.component.js");
+    this.showNewKegForm = true;
   }
 
 }
