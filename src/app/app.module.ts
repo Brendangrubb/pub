@@ -8,6 +8,7 @@ import { KegListComponent } from './keg-list/keg-list.component';
 import { HeaderComponent } from './header/header.component';
 import { KegEditComponent } from './keg-edit/keg-edit.component';
 import { NewKegComponent } from './new-keg/new-keg.component';
+import { LowPintsPipe } from './low-pints.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { NewKegComponent } from './new-keg/new-keg.component';
     KegListComponent,
     HeaderComponent,
     KegEditComponent,
-    NewKegComponent
+    NewKegComponent,
+    LowPintsPipe
   ],
   imports: [
     BrowserModule,

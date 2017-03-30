@@ -12,7 +12,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let keg of kegList; let idx = index;">
+    <tr *ngFor="let keg of kegList | lowPints; let idx = index;">
       <td>${{keg.price}}</td>
       <td>{{keg.brewName}}</td>
       <td>{{keg.brewBrand}}</td>

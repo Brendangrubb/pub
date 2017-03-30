@@ -14,9 +14,9 @@ export class AppComponent {
   showNewKegForm = false;
 
   kegList: Keg[] = [
-    new Keg('Squirrel IPA', 'SheDoots', 5, 7.5),
+    new Keg('Squirrel IPA', 'SheDoots', 5, 7.5, 3),
     new Keg('Hop Scotch Red', 'Pearl Divers', 4, 7.1),
-    new Keg('Big Stick Stout', 'East Side Brewlers', 6, 8, 120)
+    new Keg('Big Stick Stout', 'East Side Brewlers', 6, 8, 4)
   ];
 
   deleteKeg(idx: number) {

@@ -22,6 +22,8 @@ ng g component header
 
 ng g component keg-edit
 
+ng g pipe low-pints
+
 
 ## Software to have on computer to develop and Run
 * [Git](https://git-scm.com/)
