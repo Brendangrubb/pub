@@ -12,9 +12,14 @@ import { Keg } from './../keg.model';
 export class KegListComponent implements OnInit {
   @Input() kegList: Keg[];
   @Output() deleteKegSender = new EventEmitter();
+  @Output() sellPintSender = new EventEmitter();
 
   deleteKeg(idx: number) {
     this.deleteKegSender.emit(idx);
+  }
+
+  sellPint(idx: number) {
+    this.sellPintSender.emit(idx);
   }
 
   constructor() { }

@@ -20,6 +20,9 @@ export class AppComponent {
     this.kegList.splice(idx, 1);
   }
 
+  sellPint(idx: number) {
+    this.kegList[idx].pintsRemaining-- ;
+  }
 
 
 }
