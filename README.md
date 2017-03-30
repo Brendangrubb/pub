@@ -19,11 +19,16 @@ bower install bootstrap --save
 (In angular-cli.json under apps:, styles add ,"../bower_components/bootstrap/dist/css/bootstrap.css")
 
 ## Software to have on computer to develop and Run
+* [Git](https://git-scm.com/)
+* [Node.js](https://nodejs.org/) (with NPM)
+* [Bower](https://bower.io/)
+* [https://www.npmjs.com/package/angular2-cli](https://www.npmjs.com/package/angular2-cli)
+(gulp not used due to angular-cli asset packaging)
 
 ## Bring up this project
-clone
+clone from GitHub
 npm install
-etc.
+bower install
 ng serve (localhost:4200)
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.26.
